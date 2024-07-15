@@ -19,8 +19,7 @@ function App() {
     //     photo_url: ''
     // });
 
-    const handleClick = () => {
-        console.log(WebApp.initData);
+    // const handleClick = () => {
         // WebApp.showAlert(
         //     <div>
         //         <span>id: {WebApp.WebAppUser.id}</span>
@@ -35,7 +34,7 @@ function App() {
         //         <span>photo_url: {WebApp.WebAppUser.photo_url}</span>
         //     </div>
         // )
-    }
+    // }
 
     return (
         <>
@@ -53,7 +52,7 @@ function App() {
                     count is {count}
                 </button>
                 <div className="card">
-                    <button onClick={handleClick}>
+                    <button onClick={() => WebApp.showAlert(`Hello Mother Fucker ${count}`)}>
                         Show User Information
                     </button>
                 </div>
