@@ -3,22 +3,21 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import WebApp from "@twa-dev/sdk";
-import WebAppUser from "@twa-dev/sdk";
 
 function App() {
     const [count, setCount] = useState(0);
-    const [userData, setUserData] = useState({
-        id: null,
-        is_bot: false,
-        first_name: '',
-        last_name: '',
-        username: '',
-        language_code: '',
-        is_premium: false,
-        added_to_attachment_menu: false,
-        allows_write_to_pm: false,
-        photo_url: ''
-    });
+    // const [userData, setUserData] = useState({
+    //     id: null,
+    //     is_bot: false,
+    //     first_name: '',
+    //     last_name: '',
+    //     username: '',
+    //     language_code: '',
+    //     is_premium: false,
+    //     added_to_attachment_menu: false,
+    //     allows_write_to_pm: false,
+    //     photo_url: ''
+    // });
 
     const handleClick = () => {
         console.log(WebApp.initData);
