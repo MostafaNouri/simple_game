@@ -53,7 +53,7 @@ function App() {
                     count is {count}
                 </button>
                 <div className="card">
-                    <button onClick={() => WebApp.showAlert(`Hello Mother Fucker ${count}`)}>
+                    <button onClick={handleClick}>
                         Show User Information
                     </button>
                 </div>
