@@ -19,7 +19,8 @@ function App() {
     //     photo_url: ''
     // });
 
-    // const handleClick = () => {
+    const handleClick = () => {
+        console.log(WebApp.initData);
         // WebApp.showAlert(
         //     <div>
         //         <span>id: {WebApp.WebAppUser.id}</span>
@@ -34,7 +35,7 @@ function App() {
         //         <span>photo_url: {WebApp.WebAppUser.photo_url}</span>
         //     </div>
         // )
-    // }
+    }
 
     return (
         <>
