@@ -20,9 +20,9 @@ function App() {
     // });
 
     const handleClick = () => {
-        let webAppData = WebApp.initData;
-        const data = JSON.parse('{"' + decodeURI(webAppData.replace(/&/g, "\",\"").replace(/=/g,"\":\"")) + '"}');
-        console.log(data);
+        // let webAppData = WebApp.initDataUnsafe;
+        // const data = JSON.parse('{"' + decodeURI(webAppData.replace(/&/g, "\",\"").replace(/=/g,"\":\"")) + '"}');
+        console.log(WebApp.initDataUnsafe);
         // WebApp.showAlert(
         //     <div>
         //         <span>id: {WebApp.WebAppUser.id}</span>
