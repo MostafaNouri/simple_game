@@ -1,21 +1,25 @@
+html, body {
+  width: 100% !important;
+  height: 100% !important;
+  min-width: 100% !important;
+  min-height: 100% !important;
+}
+
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  width: 100%;
+  margin: 0;
   text-align: center;
 }
 
 .logo {
-  height: 6em;
+  height: 12em;
+  width: 12em;
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
 }
-.logo:hover {
+.logo:active {
   filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
 @keyframes logo-spin {
@@ -33,10 +37,26 @@
   }
 }
 
-.card {
-  padding: 2em;
-}
-
 .read-the-docs {
   color: #888;
+}
+
+.bar-container {
+  width: 80%;
+  max-width: 1000px; /* Optional: limit the max width of the bar */
+  background-color: black; /* Light gray background */
+  border-radius: 10px; /* Rounded corners */
+  margin: 20px auto; /* Center align the container */
+  overflow: hidden; /* Ensure no overflow */
+  font-size: 12px;
+}
+
+.bar-fill {
+  background: linear-gradient(to right, #726138, #e3ab16); /* Green color */
+  height: 30px; /* Height of the bar */
+  line-height: 30px; /* Align text vertically */
+  text-align: center; /* Center text horizontally */
+  color: white; /* Text color */
+  border-radius: 5px 0 0 5px; /* Rounded corners on the left */
+  transition: width 0.3s; /* Smooth transition effect */
 }

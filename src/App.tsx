@@ -1,6 +1,4 @@
 import {useState} from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import WebApp from "@twa-dev/sdk";
 
@@ -39,35 +37,28 @@ function App() {
         // )
     }
 
+    const [width, setWidth] = useState(1000);
+
+    // Function to increase the width by 10% on button click
+    const increaseWidth = () => {
+        setWidth(prevWidth => prevWidth - 1); // Ensures width does not exceed 100%
+    };
+
     return (
         <>
             <div>
-                <a href="https://vitejs.dev" target="_blank">
-                    <img src={viteLogo} className="logo" alt="Vite logo"/>
-                </a>
-                <a href="https://react.dev" target="_blank">
-                    <img src={reactLogo} className="logo react" alt="React logo"/>
-                </a>
+                <img src="images/logo.png" className="logo" aria-disabled={true} alt="Logo" onClick={increaseWidth}/>
             </div>
-            <h1>Vite + React</h1>
             <div className="card">
-                <button onClick={() => setCount((count) => count + 1)}>
-                    count is {count}
-                </button>
-                <div className="card">
-                    <button onClick={handleClick}>
-                        Show User Information
-                    </button>
+                <div>
+                    <span>{width} / 1000</span>
                 </div>
-                <p>
-                    Edit <code>src/App.tsx</code> and save to test HMR
-                </p>
+                <div className="bar-container">
+                    <div className="bar-fill" style={{ width: `${width * 100 / 1000}%` }} />
+                </div>
             </div>
-            <p className="read-the-docs">
-                Click on the Vite and React logos to learn more
-            </p>
         </>
     )
 }
 
-export default App
+export default App;
